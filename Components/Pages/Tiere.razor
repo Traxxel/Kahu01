@@ -1,56 +1,64 @@
 @page "/tiere"
+@using DevExpress.Blazor
 
 <PageTitle>Kahu Tiernothilfe - Tiere</PageTitle>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
+<DxContainer>
+    <DxRow>
+        <DxCol Size="12">
             <h1>Unsere Tiere</h1>
             <p class="lead">
                 Hier finden Sie unsere Schützlinge, die ein neues Zuhause suchen.
             </p>
-        </div>
-    </div>
+        </DxCol>
+    </DxRow>
 
-    <div class="row mt-4">
-        <div class="col-md-4">
-            <div class="card mb-4">
-                <img src="images/placeholder.jpg" class="card-img-top" alt="Tier 1">
-                <div class="card-body">
-                    <h5 class="card-title">Max</h5>
-                    <p class="card-text">
+    <DxRow>
+        <DxCol Size="4">
+            <DxCard>
+                <DxCardImage Src="images/placeholder.jpg" Alt="Tier 1" />
+                <DxCardBody>
+                    <DxCardTitle>Max</DxCardTitle>
+                    <DxCardText>
                         Max ist ein freundlicher Hund, der gerne spielt und sich über Aufmerksamkeit freut.
                         Er sucht ein liebevolles Zuhause mit Garten.
-                    </p>
-                    <a href="#" class="btn btn-primary">Mehr erfahren</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card mb-4">
-                <img src="images/placeholder.jpg" class="card-img-top" alt="Tier 2">
-                <div class="card-body">
-                    <h5 class="card-title">Luna</h5>
-                    <p class="card-text">
+                    </DxCardText>
+                    <DxButton Text="Mehr erfahren" Click="@(() => NavigateToDetails("max"))" />
+                </DxCardBody>
+            </DxCard>
+        </DxCol>
+        <DxCol Size="4">
+            <DxCard>
+                <DxCardImage Src="images/placeholder.jpg" Alt="Tier 2" />
+                <DxCardBody>
+                    <DxCardTitle>Luna</DxCardTitle>
+                    <DxCardText>
                         Luna ist eine verspielte Katze, die gerne kuschelt und sich über Spielzeug freut.
                         Sie sucht ein ruhiges Zuhause.
-                    </p>
-                    <a href="#" class="btn btn-primary">Mehr erfahren</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card mb-4">
-                <img src="images/placeholder.jpg" class="card-img-top" alt="Tier 3">
-                <div class="card-body">
-                    <h5 class="card-title">Balu</h5>
-                    <p class="card-text">
+                    </DxCardText>
+                    <DxButton Text="Mehr erfahren" Click="@(() => NavigateToDetails("luna"))" />
+                </DxCardBody>
+            </DxCard>
+        </DxCol>
+        <DxCol Size="4">
+            <DxCard>
+                <DxCardImage Src="images/placeholder.jpg" Alt="Tier 3" />
+                <DxCardBody>
+                    <DxCardTitle>Balu</DxCardTitle>
+                    <DxCardText>
                         Balu ist ein aktiver Hund, der gerne spazieren geht und sich über Gesellschaft freut.
                         Er sucht ein aktives Zuhause.
-                    </p>
-                    <a href="#" class="btn btn-primary">Mehr erfahren</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> 
+                    </DxCardText>
+                    <DxButton Text="Mehr erfahren" Click="@(() => NavigateToDetails("balu"))" />
+                </DxCardBody>
+            </DxCard>
+        </DxCol>
+    </DxRow>
+</DxContainer>
+
+@code {
+    private void NavigateToDetails(string animalId)
+    {
+        // Hier später die Navigation zur Detailseite implementieren
+    }
+} 

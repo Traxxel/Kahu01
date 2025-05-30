@@ -1,47 +1,66 @@
 @page "/ueber-uns"
+@using DevExpress.Blazor
 
 <PageTitle>Kahu Tiernothilfe - Über uns</PageTitle>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
+<DxContainer>
+    <DxRow>
+        <DxCol Size="12">
             <h1>Über uns</h1>
             <p class="lead">
                 Kahu Tiernothilfe wurde gegründet, um Tieren in Not zu helfen und ihnen ein besseres Leben zu ermöglichen.
             </p>
-        </div>
-    </div>
+        </DxCol>
+    </DxRow>
 
-    <div class="row mt-4">
-        <div class="col-md-6">
-            <h2>Unsere Geschichte</h2>
-            <p>
-                Der Verein wurde aus der Überzeugung heraus gegründet, dass jedes Tier ein Recht auf ein würdevolles Leben hat.
-                Seit unserer Gründung haben wir vielen Tieren helfen können und arbeiten kontinuierlich daran,
-                unsere Hilfe auszuweiten.
-            </p>
-        </div>
-        <div class="col-md-6">
-            <h2>Unsere Ziele</h2>
-            <p>
-                Wir setzen uns ein für:
-            </p>
-            <ul>
-                <li>Die Rettung von Tieren in Not</li>
-                <li>Medizinische Versorgung und Rehabilitation</li>
-                <li>Vermittlung in liebevolle neue Familien</li>
-                <li>Aufklärung über artgerechte Tierhaltung</li>
-            </ul>
-        </div>
-    </div>
+    <DxRow>
+        <DxCol Size="6">
+            <DxCard>
+                <DxCardHeader>
+                    <DxCardTitle>Unsere Geschichte</DxCardTitle>
+                </DxCardHeader>
+                <DxCardBody>
+                    <DxCardText>
+                        Der Verein wurde aus der Überzeugung heraus gegründet, dass jedes Tier ein Recht auf ein würdevolles Leben hat.
+                        Seit unserer Gründung haben wir vielen Tieren helfen können und arbeiten kontinuierlich daran,
+                        unsere Hilfe auszuweiten.
+                    </DxCardText>
+                </DxCardBody>
+            </DxCard>
+        </DxCol>
+        <DxCol Size="6">
+            <DxCard>
+                <DxCardHeader>
+                    <DxCardTitle>Unsere Ziele</DxCardTitle>
+                </DxCardHeader>
+                <DxCardBody>
+                    <DxCardText>
+                        Wir setzen uns ein für:
+                    </DxCardText>
+                    <DxList>
+                        <DxListItem>Die Rettung von Tieren in Not</DxListItem>
+                        <DxListItem>Medizinische Versorgung und Rehabilitation</DxListItem>
+                        <DxListItem>Vermittlung in liebevolle neue Familien</DxListItem>
+                        <DxListItem>Aufklärung über artgerechte Tierhaltung</DxListItem>
+                    </DxList>
+                </DxCardBody>
+            </DxCard>
+        </DxCol>
+    </DxRow>
 
-    <div class="row mt-4">
-        <div class="col-md-12">
-            <h2>Unser Team</h2>
-            <p>
-                Unser Team besteht aus engagierten Tierfreunden, die sich ehrenamtlich für die Tiere einsetzen.
-                Jeder von uns bringt seine eigenen Fähigkeiten und Erfahrungen ein, um den Tieren bestmöglich zu helfen.
-            </p>
-        </div>
-    </div>
-</div> 
+    <DxRow>
+        <DxCol Size="12">
+            <DxCard>
+                <DxCardHeader>
+                    <DxCardTitle>Unser Team</DxCardTitle>
+                </DxCardHeader>
+                <DxCardBody>
+                    <DxCardText>
+                        Unser Team besteht aus engagierten Tierfreunden, die sich ehrenamtlich für die Tiere einsetzen.
+                        Jeder von uns bringt seine eigenen Fähigkeiten und Erfahrungen ein, um den Tieren bestmöglich zu helfen.
+                    </DxCardText>
+                </DxCardBody>
+            </DxCard>
+        </DxCol>
+    </DxRow>
+</DxContainer> 

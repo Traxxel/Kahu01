@@ -1,47 +1,66 @@
 ﻿@page "/"
+@using DevExpress.Blazor
 
 <PageTitle>Kahu Tiernothilfe - Home</PageTitle>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
+<DxContainer>
+    <DxRow>
+        <DxCol Size="12">
             <h1>Willkommen bei Kahu Tiernothilfe</h1>
             <p class="lead">
                 Wir sind ein gemeinnütziger Verein, der sich für Tiere in Not einsetzt.
                 Unser Ziel ist es, Tieren in schwierigen Situationen zu helfen und ihnen ein besseres Leben zu ermöglichen.
             </p>
-        </div>
-    </div>
+        </DxCol>
+    </DxRow>
 
-    <div class="row mt-4">
-        <div class="col-md-6">
-            <h2>Unsere Mission</h2>
-            <p>
-                Kahu Tiernothilfe setzt sich für Tiere ein, die in Not geraten sind.
-                Wir bieten ihnen ein Zuhause, medizinische Versorgung und die Chance auf ein neues Leben.
-            </p>
-        </div>
-        <div class="col-md-6">
-            <h2>Aktuelle Projekte</h2>
-            <p>
-                Wir arbeiten ständig an neuen Projekten, um Tieren in Not zu helfen.
-                Schauen Sie regelmäßig vorbei, um unsere aktuellen Aktivitäten zu verfolgen.
-            </p>
-        </div>
-    </div>
+    <DxRow>
+        <DxCol Size="6">
+            <DxCard>
+                <DxCardHeader>
+                    <DxCardTitle>Unsere Mission</DxCardTitle>
+                </DxCardHeader>
+                <DxCardBody>
+                    <DxCardText>
+                        Kahu Tiernothilfe setzt sich für Tiere ein, die in Not geraten sind.
+                        Wir bieten ihnen ein Zuhause, medizinische Versorgung und die Chance auf ein neues Leben.
+                    </DxCardText>
+                </DxCardBody>
+            </DxCard>
+        </DxCol>
+        <DxCol Size="6">
+            <DxCard>
+                <DxCardHeader>
+                    <DxCardTitle>Aktuelle Projekte</DxCardTitle>
+                </DxCardHeader>
+                <DxCardBody>
+                    <DxCardText>
+                        Wir arbeiten ständig an neuen Projekten, um Tieren in Not zu helfen.
+                        Schauen Sie regelmäßig vorbei, um unsere aktuellen Aktivitäten zu verfolgen.
+                    </DxCardText>
+                </DxCardBody>
+            </DxCard>
+        </DxCol>
+    </DxRow>
 
-    <div class="row mt-4">
-        <div class="col-md-12">
-            <h2>Wie Sie helfen können</h2>
-            <p>
-                Es gibt viele Möglichkeiten, uns zu unterstützen:
-            </p>
-            <ul>
-                <li>Werden Sie Pate für eines unserer Tiere</li>
-                <li>Unterstützen Sie uns mit einer Spende</li>
-                <li>Helfen Sie uns als ehrenamtlicher Mitarbeiter</li>
-                <li>Teilen Sie unsere Arbeit in den sozialen Medien</li>
-            </ul>
-        </div>
-    </div>
-</div>
+    <DxRow>
+        <DxCol Size="12">
+            <DxCard>
+                <DxCardHeader>
+                    <DxCardTitle>Wie Sie helfen können</DxCardTitle>
+                </DxCardHeader>
+                <DxCardBody>
+                    <DxCardText>
+                        Es gibt viele Möglichkeiten, uns zu unterstützen:
+                    </DxCardText>
+                    <DxList>
+                        <DxListItem>Werden Sie Pate für eines unserer Tiere</DxListItem>
+                        <DxListItem>Unterstützen Sie uns mit einer Spende</DxListItem>
+                        <DxListItem>Helfen Sie uns als ehrenamtlicher Mitarbeiter</DxListItem>
+                        <DxListItem>Teilen Sie unsere Arbeit in den sozialen Medien</DxListItem>
+                    </DxList>
+                </DxCardBody>
+            </DxCard>
+        </DxCol>
+    </DxRow>
+</DxContainer>

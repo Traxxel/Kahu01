@@ -1,23 +1,80 @@
 ﻿@inherits LayoutComponentBase
+@using DevExpress.Blazor
 
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+<DxLayout>
+    <DxLayoutHeader>
+        <DxNavBar>
+            <NavBarBrand>
+                <a class="navbar-brand" href="">Kahu Tiernothilfe</a>
+            </NavBarBrand>
+            <NavBarToggler @onclick="ToggleNavMenu" />
+            <NavBarCollapse>
+                <DxNavBarNav>
+                    <DxNavBarItem>
+                        <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                            <span class="oi oi-home" aria-hidden="true"></span> Home
+                        </NavLink>
+                    </DxNavBarItem>
+                    <DxNavBarItem>
+                        <NavLink class="nav-link" href="ueber-uns">
+                            <span class="oi oi-people" aria-hidden="true"></span> Über uns
+                        </NavLink>
+                    </DxNavBarItem>
+                    <DxNavBarItem>
+                        <NavLink class="nav-link" href="tiere">
+                            <span class="oi oi-heart" aria-hidden="true"></span> Tiere
+                        </NavLink>
+                    </DxNavBarItem>
+                    <DxNavBarItem>
+                        <NavLink class="nav-link" href="patenschaften">
+                            <span class="oi oi-star" aria-hidden="true"></span> Patenschaften
+                        </NavLink>
+                    </DxNavBarItem>
+                    <DxNavBarItem>
+                        <NavLink class="nav-link" href="spenden">
+                            <span class="oi oi-dollar" aria-hidden="true"></span> Spenden
+                        </NavLink>
+                    </DxNavBarItem>
+                    <DxNavBarItem>
+                        <NavLink class="nav-link" href="kontakt">
+                            <span class="oi oi-envelope-closed" aria-hidden="true"></span> Kontakt
+                        </NavLink>
+                    </DxNavBarItem>
+                </DxNavBarNav>
+            </NavBarCollapse>
+        </DxNavBar>
+    </DxLayoutHeader>
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://kahu-tiernothilfe.de" target="_blank">Original Website</a>
-        </div>
-
-        <article class="content px-4">
+    <DxLayoutMain>
+        <DxContainer>
             @Body
-        </article>
-    </main>
-</div>
+        </DxContainer>
+    </DxLayoutMain>
+
+    <DxLayoutFooter>
+        <DxContainer>
+            <DxRow>
+                <DxCol Size="12">
+                    <p class="text-center">
+                        &copy; @DateTime.Now.Year - Kahu Tiernothilfe
+                    </p>
+                </DxCol>
+            </DxRow>
+        </DxContainer>
+    </DxLayoutFooter>
+</DxLayout>
 
 <div id="blazor-error-ui">
-    An unhandled error has occurred.
-    <a href="" class="reload">Reload</a>
+    Ein unerwarteter Fehler ist aufgetreten.
+    <a href="" class="reload">Neu laden</a>
     <a class="dismiss">🗙</a>
 </div>
+
+@code {
+    private bool collapseNavMenu = true;
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}
